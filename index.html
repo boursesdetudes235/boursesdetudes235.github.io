@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bourses des études 235</title>
+
+    <!-- Google Fonts: Pacifico (heading) & Inter (ui) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- main CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Your JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site-header">
+    <div class="top-bar">
+        <div class="right">
+            <a href="#">Contactez-nous</a>
+            <a href="#">À propos</a>
+        </div>
+    </div>
+
+</div>
+
+    <!-- da bakan hanna liste bourse -->
+
+    <header>
+        <div class="logo"><img src="images/head_image.png" alt="Header Image" class="header-image"></div>
+        <nav>
+
+        <!-- Lightbox markup -->
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Preview">
+                <button class="lightbox-close" aria-label="Close">&times;</button>
+            </div>
+        </div>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+
+                <li><a href="">Bourses ▾</a>
+                    <div class="dropdown">
+                        <a href="Bourses/Licence.html">Bourses Licence</a>
+                        <a href="Bourses/Master.html">Bourses Master</a>
+                        <a href="Bourses/Doctorat.html">Bourses Doctorat</a>
+                        <a href="Bourses/Entièrement Financé.html">Bourses Entièrement Financé</a>
+                        <a href="Bourses/Bourses Sans IELTS.html">Bourses Sans IELTS</a>
+                        <a href="Bourses/Bourses Avec IELTS.html">Bourses Avec IELTS</a>
+                    </div>
+                </li>
+
+                <li><a href="">Programmes & Prix ▾</a>
+                    <div class="dropdown">
+                        <a href="Programmes & Prix/Programmes d'Échange.html">Programmes d'Échange</a>
+                        <a href="Programmes & Prix/Programmes d'Été.html">Programmes d'Été</a>
+                        <a href="Programmes & Prix/Prix & Compétitions.html">Prix & Compétitions</a>
+                        <a href="Programmes & Prix/Programmes de Recherche.html">Programmes de Recherche</a>
+                    </div>
+                </li>
+
+                <li><a href="">Guides ▾</a>
+                    <div class="dropdown">
+                        <a href="Guides/Comment Postuler.html">Comment Postuler ?</a>
+                        <a href="Guides/Lettre de Motivation.html">Lettre de Motivation</a>
+                        <a href="Guides/CV Académique.html">CV Académique</a>
+                        <a href="Guides/Guide CSC & CSCA.html">Guide CSC & CSCA</a>
+                        <a href="Guides/Étudier en Chine.html">Étudier en Chine</a>
+                        <a href="Guides/Étudier en Europe.html">Étudier en Europe</a>
+                    </div>
+                </li>
+
+                <li><a href="">Stages ▾</a>
+                    <div class="dropdown">
+                        <a href="Stages/Internationaux.html">Stages Internationaux</a>
+                        <a href="Stages/Non Payant.html">Stages Non Payant</a>
+                        <a href="Stages/Payant.html">Stages Payant</a>
+                    </div>
+                </li>
+
+                <li><a href="">Infos Pays ▾</a>
+                    <div class="dropdown">
+                        <a href="Infos Pays/Chine.html">Chine</a>
+                        <a href="Infos Pays/Brunei.html">Brunei</a>
+                        <a href="Infos Pays/Russie.html">Russie</a>
+                        <a href="Infos Pays/Corée du Sud.html">Corée du Sud</a>
+                        <a href="Infos Pays/Turquie.html">Turquie</a>
+                        <a href="Infos Pays/Canada.html">Canada</a>
+                        <a href="Infos Pays/Thaïlande.html">Thaïlande</a>
+                        <a href="Infos Pays/États-Unis.html">États-Unis</a>
+                        <a href="Infos Pays/France.html">France</a>
+                        <a href="Infos Pays/Allemagne.html">Allemagne</a>
+                        <a href="Infos Pays/Italie.html">Italie</a>
+                        <a href="Infos Pays/Malaisie.html">Malaisie</a>
+                        <a href="Infos Pays/Indonésie.html">Indonésie</a>
+                        <a href="Infos Pays/Japon.html">Japon</a>
+                        <a href="Infos Pays/Arabie Saoudite.html">Arabie Saoudite</a>
+                        <a href="Infos Pays/Émirats Arabes Unis.html">Émirats Arabes Unis</a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div class="search-wrapper">
+                <input type="text" id="searchBox" placeholder="Rechercher une bourse..." autocomplete="off">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            <span class="icon" id="searchIcon">🔍</span>
+            <span class="icon">📘</span>
+            <span class="icon">🎓</span>
+            <div class="menu-toggle" id="mobile-menu-toggle">☰</div>
+        </div>
+    </header>
+    
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-left">
+
+            <div style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #000000; font-weight: bold;">Accueil</a></div>
+            <div class="tag">
+                <span class="dot"></span>
+                <span>Trouvez des bourses de plus de $50,000</span>
+            </div>
+
+            <h1>Votre parcours éducatif commence ici.</h1>
+
+            <p>
+                Boursesd’Études235.org est une plateforme reconnue et fiable dans le monde entier.
+                Elle offre aux étudiants internationaux des opportunités universitaires 
+                exceptionnelles en couvrant les frais de scolarité, le coût de la vie, 
+                les billets de voyage et bien plus encore.
+            </p>
+
+            <a href="#" class="btn">Explorer les opportunités</a>
+
+        </div>
+
+        <div class="hero-right">
+            <img src="images/istockphoto-1419416580-612x612.jpg" alt="Étudiant">
+        </div>
+    </section>
+    
+  <div class="container">
+
+    <!-- dahana hanna al tihit chiya da-->
+    <div class="featured-wrapper" style="position: relative; display: flex; align-items: center;">
+      <button onclick="document.getElementById('featured-scroll').scrollBy({left: -340, behavior: 'smooth'})" style="background: #630039; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; position: absolute; left: -20px; top: 50%; transform: translateY(-50%); box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 18px; display: flex; align-items: center; justify-content: center;">&#10094;</button>
+
+      <div class="featured" id="featured-scroll" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px 5px; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
+        <style>.featured::-webkit-scrollbar { display: none; }</style>
+
+      <div class="featured-card hover-reveal" style="min-width: 320px; flex: 0 0 auto; cursor: pointer;" onclick="window.location.href='Infos Pays/France.html'">
+        <div style="position: relative; z-index: 2;">
+            <div class="tags">ENTIÈREMENT FINANCÉ · FRANCE</div>
+            <h2>Bourses Émile Boutmy Sciences Po 2026–2027 — Bourses Entièrement Financé en France</h2>
+            <div class="meta">Par Roufai_s_r · 1 janvier 2026</div>
+        </div>
+        <img src="images/istockphoto-1419416580-612x612.jpg" alt="France" class="hover-image">
+      </div>
+      <div class="featured-card" style="min-width: 320px; flex: 0 0 auto;">
+        <div class="tags">ENTIÈREMENT FINANCÉ · ITALIE</div>
+        <h2>Bourse MAECI 2026 | Études entièrement financées en Italie</h2>
+        <div class="meta">Par Roufai_s_r · 1 janvier 2026</div>
+      </div>
+
+      <!-- Duplicates -->
+      <div class="featured-card" style="min-width: 320px; flex: 0 0 auto;">
+        <div class="tags">ENTIÈREMENT FINANCÉ · MASTER · DOCTORAT · LICENCE</div>
+        <h2>Bourse de la Fondation Aga Khan 2026</h2>
+        <div class="meta">Par Roufai_s_r · 1 janvier 2026</div>
+      </div>
+      <div class="featured-card" style="min-width: 320px; flex: 0 0 auto;">
+        <div class="tags">ENTIÈREMENT FINANCÉ · ITALIE</div>
+        <h2>Bourse MAECI 2026 | Études entièrement financées en Italie</h2>
+        <div class="meta">Par Roufai_s_r · 1 janvier 2026</div>
+      </div>
+
+      </div>
+      <button onclick="document.getElementById('featured-scroll').scrollBy({left: 340, behavior: 'smooth'})" style="background: #630039; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 18px; display: flex; align-items: center; justify-content: center;">&#10095;</button>
+    </div>
+  </div> <!-- End of top container to allow full-width section below -->
+
+  <!-- Professional Scholarship Listing Section -->
+  <section class="scholarship-section">
+    <div class="container">
+        <div style="margin-bottom: 10px;"><span style="font-size: 14px; background-color: #630039; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Mises à jour</span></div>
+        <h1>Bourses pour étudiants internationaux</h1>
+
+        <div class="scholarship-grid">
+            <!-- Card 1 -->
+            <a href="Infos Pays/Turquie.html" class="scholarship-card">
+                <div class="scholarship-thumb" style="background-image: url('images/head_image.png');"></div>
+                <div class="scholarship-content">
+                    <h3 class="scholarship-title">Bourse de Turquie (Burslari) 2026 pour étudiants internationaux</h3>
+                    <div class="scholarship-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+                        1 janvier 2026
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="Infos Pays/Brunei.html" class="scholarship-card">
+                <div class="scholarship-thumb" style="background-image: url('images/brunei_pic.png');"></div>
+                <div class="scholarship-content">
+                    <h3 class="scholarship-title">Bourse du Gouvernement du Brunei Darussalam (BDGS) 2026</h3>
+                    <div class="scholarship-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+                        1 janvier 2026
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="Infos Pays/Arabie Saoudite.html" class="scholarship-card">
+                <div class="scholarship-thumb" style="background-image: url('images/Bourse\ de\ la\ Banque\ Islamique\ de\ Développement\ \(IsDB\).png');"></div>
+                <div class="scholarship-content">
+                    <h3 class="scholarship-title">Bourse de la Banque Islamique de Développement (IsDB) 2026</h3>
+                    <div class="scholarship-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+                        1 janvier 2026
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="Infos Pays/Thaïlande.html" class="scholarship-card">
+                <div class="scholarship-thumb" style="background-image: url('images/Bourse d\'etude de l\'Institut Superieur Chulabhorn (MASTER) 2026.png');"></div>
+                <div class="scholarship-content">
+                    <h3 class="scholarship-title">Bourses d'études du gouvernement thaïlandais (TIPP) 2026</h3>
+                    <div class="scholarship-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+                        1 janvier 2026
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="Infos Pays/Chine.html" class="scholarship-card">
+                <div class="scholarship-thumb" style="background-image: url('images/CSC Scholarship 2026 et China Scholastic Competency Assessment (CSCA).png');"></div>
+                <div class="scholarship-content">
+                    <h3 class="scholarship-title">China Scholastic Competency Assessment (CSCA) 2026</h3>
+                    <div class="scholarship-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+                        1 janvier 2026
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="#" class="scholarship-card">
+                <div class="scholarship-thumb" style="background-image: url('images/head_image.png');"></div>
+                <div class="scholarship-content">
+                    <h3 class="scholarship-title">Bourse UNICAF 2026 | Entièrement financée</h3>
+                    <div class="scholarship-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+                        1 janvier 2026
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="voir toutes les bourses.html" class="view-all-btn">Voir toutes les bourses</a>
+        </div>
+    </div>
+  </section>
+
+  <div class="container"> <!-- Re-open container for footer if needed, or leave footer outside -->
+
+    <!-- Programs Section -->
+    <div class="programs-wrapper">
+        <!-- LEFT COLUMN -->
+        <div class="programs-col">
+            <h2>Programmes de Carrière & Recherche</h2>
+
+            <div class="program-card">
+                <img src="images/head_image.png" alt="Chevening">
+                <div>
+                    <div class="program-meta">Bourses Non Diplômantes</div>
+                    <div class="program-title">Bourse Chevening 2025 | Entièrement Financé</div>
+                    <div class="program-author">PAR ROUFAI_S_R</div>
+                </div>
+                <div class="program-arrow">→</div>
+            </div>
+
+            <div class="program-card">
+                <img src="images/head_image.png" alt="Mitacs">
+                <div>
+                    <div class="program-meta">Bourses Non Diplômantes Canada</div>
+                    <div class="program-title">Stage de Recherche Mitacs Globalink 2026</div>
+                    <div class="program-author">PAR ROUFAI_S_R</div>
+                </div>
+                <div class="program-arrow">→</div>
+            </div>
+
+            <div class="program-view-all">Voir Tout</div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="programs-col">
+            <h2>Programmes Internationaux</h2>
+
+            <div class="program-card">
+                <img src="images/head_image.png" alt="Competition">
+                <div>
+                    <div class="program-meta">Compétitions</div>
+                    <div class="program-title">Concours de Photographie | Prix ND 10 000 $ en Prix</div>
+                </div>
+                <div class="program-date-box">26 <span>Août</span></div>
+            </div>
+
+            <div class="program-card">
+                <img src="images/head_image.png" alt="UNESCO">
+                <div>
+                    <div class="program-meta">Compétitions</div>
+                    <div class="program-title">Concours Photo Compétences en Action 2025 | UNESCO UNEVOC</div>
+                </div>
+                <div class="program-date-box">25 <span>Août</span></div>
+            </div>
+
+            <div class="program-view-all">Voir Tout</div>
+        </div>
+    </div>
+
+    <!-- Countries Section -->
+    <section class="countries-section">
+        <h2>Explorer les bourses par pays</h2>
+
+        <div class="countries-grid">
+            <div class="country-card" onclick="window.location.href='Infos Pays/États-Unis.html'">
+                <img src="images/america.png" alt="États-Unis">
+                <h3>États-Unis</h3>
+            </div>
+
+            <div class="country-card" onclick="window.location.href='Infos Pays/Allemagne.html'">
+                <img src="images/allemagne.png" alt="Allemagne">
+                <h3>Allemagne</h3>
+            </div>
+
+            <div class="country-card" onclick="window.location.href='Infos Pays/Canada.html'">
+                <img src="images/9bfde4ba-6dbc-4228-a331-5ee1c4812881.png" alt="Canada">
+                <h3>Canada</h3>
+            </div>
+
+            <div class="country-card" onclick="window.location.href='Infos Pays/Chine.html'">
+                <img src="images/chine.png" alt="Chine">
+                <h3>Chine</h3>
+            </div>
+
+            <div class="country-card" onclick="window.location.href='Infos Pays/France.html'">
+                <img src="images/france.png" alt="France">
+                <h3>France</h3>
+            </div>
+        </div>
+
+        <a href="#" class="view-all-countries-btn">Voir tous les pays</a>
+    </section>
+
+    <!-- Guides Section -->
+    <section class="guides-section">
+        <h2>Guides pour les étudiants internationaux</h2>
+
+        <div class="guides-grid">
+            <div class="guide-card" onclick="window.location.href='Guides/Étudier en Europe.html'">
+                <img src="images/head_image.png" alt="Étudier à l’étranger">
+                <div class="guide-category">Guides d’études à l’étranger</div>
+                <div class="guide-title">
+                    Étudier à l’étranger – Guide complet pour étudier à l’international
+                </div>
+            </div>
+
+            <div class="guide-card" onclick="window.location.href='Guides/Étudier en Europe.html'">
+                <img src="images/head_image.png" alt="Destinations études">
+                <div class="guide-category">Guides d’études à l’étranger</div>
+                <div class="guide-title">Les 10 meilleures destinations pour étudier à l’étranger en 2026</div>
+            </div>
+
+            <div class="guide-card" onclick="window.location.href='Guides/Comment Postuler.html'">
+                <img src="images/head_image.png" alt="Bourse entièrement financée">
+                <div class="guide-category">Conseils de candidature</div>
+                <div class="guide-title">Comment obtenir une bourse entièrement financée</div>
+            </div>
+        </div>
+    </section>
+
+  <section class="search-section">
+    <h1>Que recherchez-vous&nbsp;?</h1>
+
+    <div class="tags-container">
+        <div class="tag green">Conseils de candidature <span>1</span></div>
+        <div class="tag dark-green">Canada <span>4</span></div>
+        <div class="tag purple">Chine <span>2</span></div>
+        <div class="tag orange">Concours <span>2</span></div>
+        <div class="tag red">Conférences <span>1</span></div>
+        <div class="tag blue">France <span>1</span></div>
+        <div class="tag yellow">Bourses entièrement financées <span>44</span></div>
+        <div class="tag orange">Allemagne <span>3</span></div>
+        <div class="tag indigo">Indonésie <span>4</span></div>
+        <div class="tag teal">Japon <span>4</span></div>
+        <div class="tag lime">Corée <span>3</span></div>
+        <div class="tag brown">Bourses de master <span>37</span></div>
+        <div class="tag gray">Bourses sans diplôme <span>7</span></div>
+        <div class="tag purple">Bourses de doctorat <span>30</span></div>
+        <div class="tag blue">Bourses par date limite <span>5</span></div>
+        <div class="tag pink">Afrique du Sud <span>1</span></div>
+        <div class="tag purple">Guides d’études à l’étranger <span>2</span></div>
+        <div class="tag lime">Suède <span>2</span></div>
+        <div class="tag indigo">Taïwan <span>1</span></div>
+        <div class="tag blue">Thaïlande <span>2</span></div>
+        <div class="tag brown">Royaume-Uni <span>14</span></div>
+        <div class="tag lime">Bourses de premier cycle <span>33</span></div>
+        <div class="tag pink">États-Unis <span>12</span></div>
+    </div>
+  </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+
+        <!-- Popular Posts -->
+        <div class="footer-col">
+          <h3>Articles Populaires</h3>
+
+          <div class="post-item">
+            <img src="img1.jpg" alt="">
+            <div>
+              <p><strong>Bourse de la Banque Islamique de Développement (IsDB) 2026</strong></p>
+              <small>1 janvier 2026</small>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <img src="img2.jpg" alt="">
+            <div>
+              <p><strong>Jack Kent Cooke Scholarship 2027</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <img src="img3.jpg" alt="">
+            <div>
+              <p><strong>Jardine Scholarship 2026–27 | Fully Funded</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Us -->
+        <div class="footer-col">
+          <h3>À propos de nous</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">À propos de l'organisation</a></li>
+            <li><a href="#">Nos étudiants</a></li>
+            <li><a href="#">Nos partenaires</a></li>
+          </ul>
+        </div>
+
+        <!-- Useful Information & Contact -->
+        <div class="footer-col">
+          <h3>Informations Utiles</h3>
+          <p class="contact-intro">
+            <strong>boursesdetudes235.app</strong> est votre plateforme de confiance pour découvrir des bourses d'études entièrement financées,
+            des programmes de recherche, des stages et des opportunités d'études à l'étranger dans le monde entier.
+          </p>
+
+          <h3>Coordonnées</h3>
+          
+          <div class="contact-row">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg></div>
+            <div class="contact-text">
+              <strong>Adresse:</strong>
+              <span>Nom de la rue</span>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></div>
+            <div class="contact-text">
+              <strong>Email:</strong>
+              <span>boursesdetudes235@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg></div>
+            <div class="contact-text">
+              <strong>Site Web:</strong>
+              <span>boursesdetudes.app</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="footer-bottom">
+        <p>Droits d'auteur © 2026 - boursesdetudes.app</p>
+        <div class="footer-links">
+          <a href="#">Conditions d'utilisation</a> | <a href="#">Confidentialité</a> | <a href="#">Avertissement</a> | <a href="#">Droits d'auteur</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Bourses par Pays</title>
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: #ffffff;
+        color: #0a2540;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 14px; margin-bottom: 30px; }
+    .breadcrumb a { color: #2f5cff; text-decoration: none; font-weight: 500; }
+    .breadcrumb span { margin: 0 8px; color: #6b7a90; }
+
+    /* Header */
+    .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
+    .page-header h1 { font-size: 42px; font-weight: 700; margin: 0; }
+
+    .social-icons { display: flex; gap: 12px; }
+    .social-icons a {
+        width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: #fff; font-size: 18px; text-decoration: none; font-weight: bold;
+    }
+    .facebook { background: #3b5998; }
+    .youtube { background: #ff0000; }
+    .twitter { background: #000000; }
+    .pinterest { background: #bd081c; }
+    .instagram { background: #000000; }
+
+    /* Sections */
+    .continent { margin-bottom: 80px; }
+    .continent h2 { font-size: 36px; margin-bottom: 30px; color: #0a2540; }
+
+    .countries-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 40px;
+        max-width: 900px;
+    }
+
+    .country-card { text-align: center; cursor: pointer; transition: transform 0.3s ease; }
+    .country-card:hover { transform: translateY(-6px); }
+    .country-card img {
+        width: 100%; height: 120px; object-fit: cover; border-radius: 4px; margin-bottom: 12px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .country-card h4 { font-size: 18px; font-weight: 600; margin: 0; color: #0a2540; }
+
+    @media (max-width: 900px) {
+        .page-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+        .page-header h1 { font-size: 34px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <a href="index.html">ACCUEIL</a>
+    <span>›</span>
+    <span>BOURSES PAR PAYS</span>
+</div>
+
+<!-- Page Header -->
+<div class="page-header">
+    <h1>Liste des bourses par pays</h1>
+    <div class="social-icons">
+        <a href="#" class="facebook">f</a>
+        <a href="#" class="youtube">▶</a>
+        <a href="#" class="twitter">X</a>
+        <a href="#" class="pinterest">P</a>
+        <a href="#" class="instagram">◎</a>
+    </div>
+</div>
+
+<!-- Africa -->
+<section class="continent">
+    <h2>Afrique</h2>
+    <div class="countries-grid">
+        <div class="country-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg" alt="Afrique du Sud">
+            <h4>Afrique du Sud</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Asia -->
+<section class="continent">
+    <h2>Asie</h2>
+    <div class="countries-grid">
+        <div class="country-card" onclick="window.location.href='Infos Pays/Indonésie.html'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="Indonésie">
+            <h4>Indonésie</h4>
+        </div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Thaïlande.html'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" alt="Thaïlande">
+            <h4>Thaïlande</h4>
+        </div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Chine.html'">
+            <img src="images/chine.png" alt="Chine">
+            <h4>Chine</h4>
+        </div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Corée du Sud.html'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Corée du Sud">
+            <h4>Corée du Sud</h4>
+        </div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Japon.html'">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japon">
+            <h4>Japon</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Europe -->
+<section class="continent">
+    <h2>Europe</h2>
+    <div class="countries-grid">
+        <div class="country-card"><img src="images/head_image.png" alt="Royaume-Uni"><h4>Royaume-Uni</h4></div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/France.html'"><img src="images/france.png" alt="France"><h4>France</h4></div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Allemagne.html'"><img src="images/allemagne.png" alt="Allemagne"><h4>Allemagne</h4></div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Turquie.html'"><img src="images/head_image.png" alt="Turquie"><h4>Turquie</h4></div>
+    </div>
+</section>
+
+<!-- America -->
+<section class="continent">
+    <h2>Amérique</h2>
+    <div class="countries-grid">
+        <div class="country-card" onclick="window.location.href='Infos Pays/États-Unis.html'"><img src="images/america.png" alt="États-Unis"><h4>États-Unis</h4></div>
+        <div class="country-card" onclick="window.location.href='Infos Pays/Canada.html'"><img src="images/9bfde4ba-6dbc-4228-a331-5ee1c4812881.png" alt="Canada"><h4>Canada</h4></div>
+    </div>
+</section>
+
+</body>
+</html>
