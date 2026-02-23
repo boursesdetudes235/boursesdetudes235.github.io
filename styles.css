@@ -4,7 +4,7 @@
     --accent: var(--violet);  /* use site violet instead of blue */
     --topbar-bg: var(--violet); /* slim top bar uses site violet */
 /* BODY */
-body {
+body { 
   margin: 0;
   min-height: 100vh;
 }
@@ -88,13 +88,8 @@ header .icons { justify-self: end; }
   /* Mobile Dropdowns */
   .dropdown { position: static; width: 100%; box-shadow: none; border-radius: 0; background: #f8f9fa; display: none; padding: 0; }
   .dropdown a { padding-left: 40px; font-size: 14px; }
-  nav ul li:hover .dropdown { display: none; } /* Disable hover on mobile, rely on JS click */
 }
 
-.top-bar a { color: #ffffff; text-decoration: none; }
-.top-bar a:hover { text-decoration: underline; opacity: 0.95; }
-
-/* Lightbox */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -182,6 +177,14 @@ nav a:hover {
     padding: 10px 0;
     min-width: 220px;
     border-radius: 6px;
+    z-index: 1100;
+}
+
+/* Show dropdown on hover for desktop */
+@media (min-width: 901px) {
+    nav ul li:hover .dropdown {
+        display: block;
+    }
 }
 
 .dropdown a {
@@ -190,13 +193,9 @@ nav a:hover {
     white-space: nowrap;
 }
 
-.dropdown a:hover {
-    background: transparent;
-    color: var(--violet);
-}
-
-nav ul li:hover .dropdown {
-    display: block;
+nav ul li .dropdown a:hover {
+    background: var(--violet);
+    color: #ffffff;
 }
 
 /* ICONS */
