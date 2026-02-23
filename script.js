@@ -56,22 +56,22 @@ const sitePages = [
     { title: "Stages Internationaux", url: "Stages/Internationaux.html" },
     { title: "Stages Non Payant", url: "Stages/Non Payant.html" },
     { title: "Stages Payant", url: "Stages/Payant.html" },
-    { title: "Chine", url: "infos-pays/Chine.html" },
-    { title: "Brunei", url: "infos-pays/Brunei.html" },
-    { title: "Russie", url: "infos-pays/Russie.html" },
-    { title: "Corée du Sud", url: "infos-pays/Corée du Sud.html" },
-    { title: "Turquie", url: "infos-pays/Turquie.html" },
-    { title: "Canada", url: "infos-pays/Canada.html" },
-    { title: "Thaïlande", url: "infos-pays/Thaïlande.html" },
-    { title: "États-Unis", url: "infos-pays/États-Unis.html" },
-    { title: "France", url: "infos-pays/France.html" },
-    { title: "Allemagne", url: "infos-pays/Allemagne.html" },
-    { title: "Italie", url: "infos-pays/Italie.html" },
-    { title: "Malaisie", url: "infos-pays/Malaisie.html" },
-    { title: "Indonésie", url: "infos-pays/Indonésie.html" },
-    { title: "Japon", url: "infos-pays/Japon.html" },
-    { title: "Arabie Saoudite", url: "infos-pays/Arabie Saoudite.html" },
-    { title: "Émirats Arabes Unis", url: "infos-pays/Émirats Arabes Unis.html" }
+    { title: "Chine", url: "Infos Pays/Chine.html" },
+    { title: "Brunei", url: "Infos Pays/Brunei.html" },
+    { title: "Russie", url: "Infos Pays/Russie.html" },
+    { title: "Corée du Sud", url: "Infos Pays/Corée du Sud.html" },
+    { title: "Turquie", url: "Infos Pays/Turquie.html" },
+    { title: "Canada", url: "Infos Pays/Canada.html" },
+    { title: "Thaïlande", url: "Infos Pays/Thaïlande.html" },
+    { title: "États-Unis", url: "Infos Pays/États-Unis.html" },
+    { title: "France", url: "Infos Pays/France.html" },
+    { title: "Allemagne", url: "Infos Pays/Allemagne.html" },
+    { title: "Italie", url: "Infos Pays/Italie.html" },
+    { title: "Malaisie", url: "Infos Pays/Malaisie.html" },
+    { title: "Indonésie", url: "Infos Pays/Indonésie.html" },
+    { title: "Japon", url: "Infos Pays/Japon.html" },
+    { title: "Arabie Saoudite", url: "Infos Pays/Arabie Saoudite.html" },
+    { title: "Émirats Arabes Unis", url: "Infos Pays/Émirats Arabes Unis.html" }
 ];
 
 if (searchIcon && searchBox) {
@@ -96,7 +96,7 @@ if (searchIcon && searchBox) {
 
         // Determine if we are in a subdirectory to adjust paths
         const path = window.location.pathname;
-        const prefix = (path.includes('/infos-pays/') || path.includes('/Bourses/') || path.includes('/Guides/') || path.includes('/Stages/') || path.includes('/Programmes & Prix/')) ? "../" : "";
+        const prefix = (path.includes('/Infos Pays/') || path.includes('/Bourses/') || path.includes('/Guides/') || path.includes('/Stages/') || path.includes('/Programmes & Prix/')) ? "../" : "";
 
         const matches = sitePages.filter(page => page.title.toLowerCase().includes(query));
 
