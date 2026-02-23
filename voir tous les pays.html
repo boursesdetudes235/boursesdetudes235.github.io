@@ -1,141 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Bourses par Pays</title>
-<style>
-    body {
-        font-family: 'Inter', sans-serif;
-        margin: 0;
-        padding: 40px;
-        background: #ffffff;
-        color: #0a2540;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bourses par Pays – Bourses des études 235</title>
 
-    /* Breadcrumb */
-    .breadcrumb { font-size: 14px; margin-bottom: 30px; }
-    .breadcrumb a { color: #2f5cff; text-decoration: none; font-weight: 500; }
-    .breadcrumb span { margin: 0 8px; color: #6b7a90; }
+    <!-- Google Fonts: Pacifico (heading) & Inter (ui) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* Header */
-    .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
-    .page-header h1 { font-size: 42px; font-weight: 700; margin: 0; }
+    <!-- main CSS file -->
+    <link rel="stylesheet" href="styles.css" />
 
-    .social-icons { display: flex; gap: 12px; }
-    .social-icons a {
-        width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-        color: #fff; font-size: 18px; text-decoration: none; font-weight: bold;
-    }
-    .facebook { background: #3b5998; }
-    .youtube { background: #ff0000; }
-    .twitter { background: #000000; }
-    .pinterest { background: #bd081c; }
-    .instagram { background: #000000; }
-
-    /* Sections */
-    .continent { margin-bottom: 80px; }
-    .continent h2 { font-size: 36px; margin-bottom: 30px; color: #0a2540; }
-
-    .countries-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 40px;
-        max-width: 900px;
-    }
-
-    .country-card { text-align: center; cursor: pointer; transition: transform 0.3s ease; }
-    .country-card:hover { transform: translateY(-6px); }
-    .country-card img {
-        width: 100%; height: 120px; object-fit: cover; border-radius: 4px; margin-bottom: 12px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .country-card h4 { font-size: 18px; font-weight: 600; margin: 0; color: #0a2540; }
-
-    @media (max-width: 900px) {
-        .page-header { flex-direction: column; align-items: flex-start; gap: 20px; }
-        .page-header h1 { font-size: 34px; }
-    }
-</style>
+    <!-- Your JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-<!-- Breadcrumb -->
-<div class="breadcrumb">
-    <a href="index.html">ACCUEIL</a>
-    <span>›</span>
-    <span>BOURSES PAR PAYS</span>
-</div>
-
-<!-- Page Header -->
-<div class="page-header">
-    <h1>Liste des bourses par pays</h1>
-    <div class="social-icons">
-        <a href="#" class="facebook">f</a>
-        <a href="#" class="youtube">▶</a>
-        <a href="#" class="twitter">X</a>
-        <a href="#" class="pinterest">P</a>
-        <a href="#" class="instagram">◎</a>
+  <div class="site-header">
+    <div class="top-bar">
+        <div class="right">
+            <a href="#">Contactez-nous</a>
+            <a href="#">À propos</a>
+        </div>
     </div>
 </div>
 
-<!-- Africa -->
-<section class="continent">
-    <h2>Afrique</h2>
-    <div class="countries-grid">
-        <div class="country-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg" alt="Afrique du Sud">
-            <h4>Afrique du Sud</h4>
-        </div>
-    </div>
-</section>
+    <header>
+        <div class="logo"><img src="images/head-image.png" alt="Header Image" class="header-image"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
 
-<!-- Asia -->
-<section class="continent">
-    <h2>Asie</h2>
-    <div class="countries-grid">
-        <div class="country-card" onclick="window.location.href='Infos Pays/Indonésie.html'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="Indonésie">
-            <h4>Indonésie</h4>
-        </div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Thaïlande.html'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" alt="Thaïlande">
-            <h4>Thaïlande</h4>
-        </div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Chine.html'">
-            <img src="chine.png" alt="Chine">
-            <h4>Chine</h4>
-        </div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Corée du Sud.html'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Corée du Sud">
-            <h4>Corée du Sud</h4>
-        </div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Japon.html'">
-            <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japon">
-            <h4>Japon</h4>
-        </div>
-    </div>
-</section>
+                <li><a href="">Bourses ▾</a>
+                    <div class="dropdown">
+                        <a href="Bourses/Licence.html">Bourses Licence</a>
+                        <a href="Bourses/Master.html">Bourses Master</a>
+                        <a href="Bourses/Doctorat.html">Bourses Doctorat</a>
+                        <a href="Bourses/Entièrement Financé.html">Bourses Entièrement Financé</a>
+                        <a href="Bourses/Bourses Sans IELTS.html">Bourses Sans IELTS</a>
+                        <a href="Bourses/Bourses Avec IELTS.html">Bourses Avec IELTS</a>
+                    </div>
+                </li>
 
-<!-- Europe -->
-<section class="continent">
-    <h2>Europe</h2>
-    <div class="countries-grid">
-        <div class="country-card"><img src="head-image.png" alt="Royaume-Uni"><h4>Royaume-Uni</h4></div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/France.html'"><img src="france.png" alt="France"><h4>France</h4></div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Allemagne.html'"><img src="allemagne.png" alt="Allemagne"><h4>Allemagne</h4></div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Turquie.html'"><img src="head-image.png" alt="Turquie"><h4>Turquie</h4></div>
-    </div>
-</section>
+                <li><a href="">Programmes & Prix ▾</a>
+                    <div class="dropdown">
+                        <a href="Programmes & Prix/Programmes d'Échange.html">Programmes d'Échange</a>
+                        <a href="Programmes & Prix/Programmes d'Été.html">Programmes d'Été</a>
+                        <a href="Programmes & Prix/Prix & Compétitions.html">Prix & Compétitions</a>
+                        <a href="Programmes & Prix/Programmes de Recherche.html">Programmes de Recherche</a>
+                    </div>
+                </li>
 
-<!-- America -->
-<section class="continent">
-    <h2>Amérique</h2>
-    <div class="countries-grid">
-        <div class="country-card" onclick="window.location.href='Infos Pays/États-Unis.html'"><img src="america.png" alt="États-Unis"><h4>États-Unis</h4></div>
-        <div class="country-card" onclick="window.location.href='Infos Pays/Canada.html'"><img src="moreal.png" alt="Canada"><h4>Canada</h4></div>
-    </div>
-</section>
+                <li><a href="">Guides ▾</a>
+                    <div class="dropdown">
+                        <a href="Guides/Comment Postuler.html">Comment Postuler ?</a>
+                        <a href="Guides/Lettre de Motivation.html">Lettre de Motivation</a>
+                        <a href="Guides/CV Académique.html">CV Académique</a>
+                        <a href="Guides/Guide CSC & CSCA.html">Guide CSC & CSCA</a>
+                        <a href="Guides/Étudier en Chine.html">Étudier en Chine</a>
+                        <a href="Guides/Étudier en Europe.html">Étudier en Europe</a>
+                    </div>
+                </li>
 
+                <li><a href="">Stages ▾</a>
+                    <div class="dropdown">
+                        <a href="Stages/Internationaux.html">Stages Internationaux</a>
+                        <a href="Stages/Non Payant.html">Stages Non Payant</a>
+                        <a href="Stages/Payant.html">Stages Payant</a>
+                    </div>
+                </li>
+
+                <li><a href="">Infos Pays ▾</a>
+                    <div class="dropdown">
+                        <a href="infos-pays/Chine.html">Chine</a>
+                        <a href="infos-pays/Brunei.html">Brunei</a>
+                        <a href="infos-pays/Russie.html">Russie</a>
+                        <a href="infos-pays/Corée du Sud.html">Corée du Sud</a>
+                        <a href="infos-pays/Turquie.html">Turquie</a>
+                        <a href="infos-pays/Canada.html">Canada</a>
+                        <a href="infos-pays/Thaïlande.html">Thaïlande</a>
+                        <a href="infos-pays/États-Unis.html">États-Unis</a>
+                        <a href="infos-pays/France.html">France</a>
+                        <a href="infos-pays/Allemagne.html">Allemagne</a>
+                        <a href="infos-pays/Italie.html">Italie</a>
+                        <a href="infos-pays/Malaisie.html">Malaisie</a>
+                        <a href="infos-pays/Indonésie.html">Indonésie</a>
+                        <a href="infos-pays/Japon.html">Japon</a>
+                        <a href="infos-pays/Arabie Saoudite.html">Arabie Saoudite</a>
+                        <a href="infos-pays/Émirats Arabes Unis.html">Émirats Arabes Unis</a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <span class="icon">🔍</span>
+            <span class="icon">📘</span>
+            <span class="icon">🎓</span>
+        </div>
+    </header>
+
+    <section class="countries-section">
+        <div class="container">
+            <h1>Explorer les bourses par pays</h1>
+            <div class="countries-grid">
+                <div class="country-card" onclick="window.location.href='infos-pays/Chine.html'"><img src="images/chine.png" alt="Chine"><h3>Chine</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Brunei.html'"><img src="images/brunei-pic.png" alt="Brunei"><h3>Brunei</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Russie.html'"><img src="images/head-image.png" alt="Russie"><h3>Russie</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Corée du Sud.html'"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Corée du Sud"><h3>Corée du Sud</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Turquie.html'"><img src="images/bourslariturquie.png" alt="Turquie"><h3>Turquie</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Canada.html'"><img src="images/moreal.png" alt="Canada"><h3>Canada</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Thaïlande.html'"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" alt="Thaïlande"><h3>Thaïlande</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/États-Unis.html'"><img src="images/america.png" alt="États-Unis"><h3>États-Unis</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/France.html'"><img src="images/france.png" alt="France"><h3>France</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Allemagne.html'"><img src="images/allemagne.png" alt="Allemagne"><h3>Allemagne</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Italie.html'"><img src="images/head-image.png" alt="Italie"><h3>Italie</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Malaisie.html'"><img src="images/head-image.png" alt="Malaisie"><h3>Malaisie</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Indonésie.html'"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="Indonésie"><h3>Indonésie</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Japon.html'"><img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japon"><h3>Japon</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Arabie Saoudite.html'"><img src="images/Bourse-de-la-banque-islamique-de-developpement.png" alt="Arabie Saoudite"><h3>Arabie Saoudite</h3></div>
+                <div class="country-card" onclick="window.location.href='infos-pays/Émirats Arabes Unis.html'"><img src="images/head-image.png" alt="Émirats Arabes Unis"><h3>Émirats Arabes Unis</h3></div>
+            </div>
+        </div>
+    </section>
+
+  <div class="container">
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <!-- Popular Posts -->
+        <div class="footer-col">
+          <h3>Articles Populaires</h3>
+          <div class="post-item">
+            <img src="images/Bourse-de-la-banque-islamique-de-developpement.png" alt="">
+            <div>
+              <p><strong>Bourse de la Banque Islamique de Développement (IsDB) 2026</strong></p>
+              <small>1 janvier 2026</small>
+            </div>
+          </div>
+          <div class="post-item">
+            <img src="images/Jack-Kent-Cooke-scholarship.png" alt="">
+            <div>
+              <p><strong>Jack Kent Cooke Scholarship 2027</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+          <div class="post-item">
+            <img src="images/jadin.jpeg" alt="">
+            <div>
+              <p><strong>Jardine Scholarship 2026–27 | Fully Funded</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+        </div>
+        <!-- About Us -->
+        <div class="footer-col">
+          <h3>À propos de nous</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">À propos de l'organisation</a></li>
+            <li><a href="#">Nos étudiants</a></li>
+            <li><a href="#">Nos partenaires</a></li>
+          </ul>
+        </div>
+        <!-- Useful Information & Contact -->
+        <div class="footer-col">
+          <h3>Informations Utiles</h3>
+          <p class="contact-intro">
+            <strong>boursesdetudes235.app</strong> est votre plateforme de confiance pour découvrir des bourses d'études entièrement financées.
+          </p>
+          <h3>Coordonnées</h3>
+          <div class="contact-row">
+            <div class="contact-text">
+              <strong>Email:</strong>
+              <span>boursesdetudes235@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-text">
+              <strong>Site Web:</strong>
+              <span>boursesdetudes235.github.io</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Droits d'auteur © 2026 - boursesdetudes235.github.io</p>
+      </div>
+    </div>
+  </footer>
+  </div>
 </body>
-
 </html>
