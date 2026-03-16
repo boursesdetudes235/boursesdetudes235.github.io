@@ -71,7 +71,8 @@ const sitePages = [
     { title: "Indonésie", url: "Infos Pays/Indonésie.html" },
     { title: "Japon", url: "Infos Pays/Japon.html" },
     { title: "Arabie Saoudite", url: "Infos Pays/Arabie Saoudite.html" },
-    { title: "Émirats Arabes Unis", url: "Infos Pays/Émirats Arabes Unis.html" }
+    { title: "Émirats Arabes Unis", url: "Infos Pays/Émirats Arabes Unis.html" },
+    { title: "Roumanie", url: "Infos Pays/Romanie.html" }
 ];
 
 if (searchIcon && searchBox) {
