@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
@@ -18,8 +18,8 @@
   <div class="site-header">
     <div class="top-bar">
         <div class="right">
-            <a href="#">Contactez-nous</a>
-            <a href="#">À propos</a>
+            <a href="Contactez-nous.html">Contactez-nous</a>
+            <a href="À propos.html">À propos</a>
         </div>
     </div>
 
@@ -28,12 +28,11 @@
     <!-- da bakan hanna liste bourse -->
 
     <header>
-        <div class="logo"><img src="images/head-image.png" alt="Header Image" class="header-image"></div>
+        <div class="logo"><img src="images/head-image.png" class="header-image"></div>
         <nav>
 
             <ul>
-                <li><a href="#">Accueil</a></li>
-
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="">Bourses ▾</a>
                     <div class="dropdown">
                         <a href="Bourses/Licence.html">Bourses Licence</a>
@@ -111,19 +110,20 @@
     
 
     <!-- HERO SECTION -->
+    <div class="hero-divider"></div>
     <section class="hero">
         <div class="hero-left">
 
             <div style="margin-bottom: 15px;"><a href="#" style="text-decoration: none; color: #000000; font-weight: bold;">Accueil</a></div>
             <div class="tag">
-                <span class="dot"></span>
+                <div class="dot"></div>
                 <span>Trouvez des bourses de plus de $50,000</span>
             </div>
 
             <h1>Votre parcours éducatif commence ici.</h1>
 
             <p>
-                Boursesd’Études235.org est une plateforme reconnue et fiable dans le monde entier.
+                Boursesd’Études235.gethub.io est une plateforme reconnue et fiable dans le monde entier.
                 Elle offre aux étudiants internationaux des opportunités universitaires 
                 exceptionnelles en couvrant les frais de scolarité, le coût de la vie, 
                 les billets de voyage et bien plus encore.
@@ -142,7 +142,7 @@
 
     <!-- dahana hanna al tihit chiya da-->
     <div class="featured-wrapper" style="position: relative; display: flex; align-items: center;">
-      <button onclick="document.getElementById('featured-scroll').scrollBy({left: -340, behavior: 'smooth'})" style="background: #630039; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; position: absolute; left: -20px; top: 50%; transform: translateY(-50%); box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 18px; display: flex; align-items: center; justify-content: center;">&#10094;</button>
+      <button onclick="document.getElementById('featured-scroll').scrollBy({left: -340, behavior: 'smooth'})" class="scroll-btn left">←</button>
 
       <div class="featured" id="featured-scroll" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px 5px; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
         <style>.featured::-webkit-scrollbar { display: none; }</style>
@@ -174,7 +174,7 @@
       </div>
 
       </div>
-      <button onclick="document.getElementById('featured-scroll').scrollBy({left: 340, behavior: 'smooth'})" style="background: #630039; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 18px; display: flex; align-items: center; justify-content: center;">&#10095;</button>
+      <button onclick="document.getElementById('featured-scroll').scrollBy({left: 340, behavior: 'smooth'})" class="scroll-btn right">→</button>
     </div>
   </div> <!-- End of top container to allow full-width section below -->
 
@@ -282,7 +282,7 @@
                 <div class="program-arrow">→</div>
             </div>
 
-            <div class="program-card">
+            <div class="program-card" onclick="window.location.href='Programmes & Prix/Stage Mitacs.html'">
                 <img src="images/Stage.jpg" alt="Mitacs">
                 <div>
                     <div class="program-meta">Bourses Non Diplômantes Canada</div>
@@ -292,32 +292,32 @@
                 <div class="program-arrow">→</div>
             </div>
 
-            <div class="program-view-all">Voir Tout</div>
+            <div class="program-view-all" onclick="window.location.href='Programmes & Prix/Programmes de Recherche.html'">Voir Tout</div>
         </div>
 
         <!-- RIGHT COLUMN -->
         <div class="programs-col">
             <h2>Programmes Internationaux</h2>
 
-            <div class="program-card">
+            <div class="program-card" onclick="window.location.href='Programmes & Prix/Concours Photo ND.html'">
                 <img src="images/concourphoto.jpeg" alt="Competition">
                 <div>
                     <div class="program-meta">Compétitions</div>
                     <div class="program-title">Concours de Photographie | Prix ND 10 000 $ en Prix</div>
                 </div>
-                <div class="program-date-box">26 <span>Août</span></div>
+                <div class="program-arrow">→</div>
             </div>
 
-            <div class="program-card">
+            <div class="program-card" onclick="window.location.href='Programmes & Prix/Concours UNESCO.html'">
                 <img src="images/Appel.png" alt="UNESCO">
                 <div>
                     <div class="program-meta">Compétitions</div>
                     <div class="program-title">Concours Photo Compétences en Action 2025 | UNESCO UNEVOC</div>
                 </div>
-                <div class="program-date-box">25 <span>Août</span></div>
+                <div class="program-arrow">→</div>
             </div>
 
-            <div class="program-view-all">Voir Tout</div>
+            <div class="program-view-all" onclick="window.location.href='Programmes & Prix/Prix & Compétitions.html'">Voir Tout</div>
         </div>
     </div>
 
@@ -466,28 +466,10 @@
 
           <h3>Coordonnées</h3>
           
-          <div class="contact-row">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg></div>
-            <div class="contact-text">
-              <strong>Adresse:</strong>
-              <span>jl. bandar lampung Indonesia</span>
-            </div>
+          
           </div>
 
-          <div class="contact-row">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></div>
-            <div class="contact-text">
-              <strong>Email:</strong>
-              <span>boursesdetudes235@gmail.com</span>
-            </div>
-          </div>
-
-          <div class="contact-row">
-            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg></div>
-            <div class="contact-text">
-              <strong>Site Web:</strong>
-              <span>boursesdetudes235.github.io</span>
-            </div>
+          
           </div>
         </div>
 
@@ -513,3 +495,4 @@
 </html>
 </body>
 </html>
+
