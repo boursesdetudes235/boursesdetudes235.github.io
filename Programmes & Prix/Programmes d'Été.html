@@ -1,5 +1,312 @@
- <!-- main CSS file -->
-    <link rel="stylesheet" href="styles.css" />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programmes d'Été - Bourses des Études 235</title>
+<!-- main CSS file -->
+<link rel="stylesheet" href="../styles.css" />
+<style>
+    /* Custom styles for this page */
+    .internship-container{
+        background:white;
+        padding:30px;
+        border-radius:12px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
 
-    <!-- Your JavaScript file -->
-    <script src="script.js"></script>
+    .internship-container h1{
+        text-align:center;
+        margin-bottom:25px;
+        font-family: 'Inter', sans-serif; /* Match site font */
+    }
+
+    .internship-table{
+        width:100%;
+        border-collapse:collapse;
+        font-size:15px;
+        font-family: 'Inter', sans-serif; /* Match site font */
+    }
+
+    .internship-table th{
+        background: var(--violet); /* Use site's violet color */
+        color:white;
+        padding:12px;
+        text-align: left;
+    }
+
+    .internship-table td{
+        padding:12px;
+        border-bottom:1px solid #ddd;
+    }
+
+    .internship-table tr:hover{
+        background:#f8f9fa; /* Lighter gray for hover */
+    }
+
+    .apply-btn{
+        padding:8px 14px;
+        border:none;
+        border-radius:6px;
+        background: var(--violet); /* Use site's violet color */
+        color:white;
+        cursor:pointer;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+    }
+
+    .apply-btn:hover{
+        background: #4e002d; /* Darker violet for hover */
+    }
+
+    .internship-footer{
+        text-align:center;
+        margin-top:20px;
+        color:#555;
+        font-family: 'Inter', sans-serif;
+    }
+</style>
+<!-- Your JavaScript file -->
+<script src="../script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Header from template -->
+<div class="site-header">
+    <div class="top-bar">
+        <div class="right">
+            <a href="#">Contactez-nous</a>
+            <a href="#">À propos</a>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="logo"><img src="../images/head-image.png" alt="Header Image" class="header-image"></div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="">Bourses ▾</a>
+                <div class="dropdown">
+                    <a href="../Bourses/Licence.html">Bourses Licence</a>
+                    <a href="../Bourses/Master.html">Bourses Master</a>
+                    <a href="../Bourses/Doctorat.html">Bourses Doctorat</a>
+                    <a href="../Bourses/Entièrement Financé.html">Bourses Entièrement Financé</a>
+                    <a href="../Bourses/Bourses Sans IELTS.html">Bourses Sans IELTS</a>
+                    <a href="../Bourses/Bourses Avec IELTS.html">Bourses Avec IELTS</a>
+                </div>
+            </li>
+            <li><a href="">Programmes & Prix ▾</a>
+                <div class="dropdown">
+                    <a href="Programmes d'Échange.html">Programmes d'Échange</a>
+                    <a href="Programmes d'Été.html">Programmes d'Été</a>
+                    <a href="Prix & Compétitions.html">Prix & Compétitions</a>
+                    <a href="Programmes de Recherche.html">Programmes de Recherche</a>
+                </div>
+            </li>
+            <li><a href="">Guides ▾</a>
+                <div class="dropdown">
+                    <a href="../Guides/Comment Postuler.html">Comment Postuler ?</a>
+                    <a href="../Guides/Lettre de Motivation.html">Lettre de Motivation</a>
+                    <a href="../Guides/CV Académique.html">CV Académique</a>
+                    <a href="../Guides/Guide CSC & CSCA.html">Guide CSC & CSCA</a>
+                    <a href="../Guides/Étudier en Chine.html">Étudier en Chine</a>
+                    <a href="../Guides/Étudier en Europe.html">Étudier en Europe</a>
+                </div>
+            </li>
+            <li><a href="">Stages ▾</a>
+                <div class="dropdown">
+                    <a href="../Stages/Internationaux.html">Stages Internationaux</a>
+                    <a href="../Stages/Non Payant.html">Stages Non Payant</a>
+                    <a href="../Stages/Payant.html">Stages Payant</a>
+                </div>
+            </li>
+            <li><a href="">Infos Pays ▾</a>
+                <div class="dropdown">
+                    <a href="../Infos Pays/Chine.html">Chine</a>
+                    <a href="../Infos Pays/Brunei.html">Brunei</a>
+                    <a href="../Infos Pays/Russie.html">Russie</a>
+                    <a href="../Infos Pays/Corée du Sud.html">Corée du Sud</a>
+                    <a href="../Infos Pays/Turquie.html">Turquie</a>
+                    <a href="../Infos Pays/Canada.html">Canada</a>
+                    <a href="../Infos Pays/Thaïlande.html">Thaïlande</a>
+                    <a href="../Infos Pays/États-Unis.html">États-Unis</a>
+                    <a href="../Infos Pays/France.html">France</a>
+                    <a href="../Infos Pays/Allemagne.html">Allemagne</a>
+                    <a href="../Infos Pays/Italie.html">Italie</a>
+                    <a href="../Infos Pays/Malaisie.html">Malaisie</a>
+                    <a href="../Infos Pays/Indonésie.html">Indonésie</a>
+                    <a href="../Infos Pays/Japon.html">Japon</a>
+                    <a href="../Infos Pays/Arabie Saoudite.html">Arabie Saoudite</a>
+                    <a href="../Infos Pays/Émirats Arabes Unis.html">Émirats Arabes Unis</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <div class="search-wrapper">
+            <input type="text" id="searchBox" placeholder="Rechercher une bourse..." autocomplete="off">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        <span class="icon" id="searchIcon">🔍</span>
+        <span class="icon">📘</span>
+        <span class="icon">🎓</span>
+        <div class="menu-toggle" id="mobile-menu-toggle">☰</div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <div class="internship-container">
+        <h1>🌍 Opportunités de Stage (Ouvert à tous les étudiants)</h1>
+        <table class="internship-table">
+            <tr>
+                <th>Entreprise</th>
+                <th>Rôle du Stage</th>
+                <th>Lieu</th>
+                <th>Durée</th>
+                <th>Candidature</th>
+            </tr>
+            <tr>
+                <td>Google</td>
+                <td>Stagiaire en Génie Logiciel</td>
+                <td>À distance / Mondial</td>
+                <td>12 Semaines</td>
+                <td><a href="https://buildyourfuture.withgoogle.com/internships" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Microsoft</td>
+                <td>Stagiaire Cloud et IA</td>
+                <td>À distance / Hybride</td>
+                <td>10–12 Semaines</td>
+                <td><a href="https://careers.microsoft.com/v2/global/en/students-and-graduates" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>IBM</td>
+                <td>Stagiaire en Science des Données</td>
+                <td>À distance</td>
+                <td>3 Mois</td>
+                <td><a href="https://www.ibm.com/employment/internships/" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Amazon</td>
+                <td>Stagiaire Analyste Commercial</td>
+                <td>À distance</td>
+                <td>12 Semaines</td>
+                <td><a href="https://www.amazon.jobs/en/business_categories/student-programs" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>UNICEF</td>
+                <td>Stagiaire en Communication</td>
+                <td>À distance</td>
+                <td>2–6 Mois</td>
+                <td><a href="https://www.unicef.org/careers/internships" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Deloitte</td>
+                <td>Stagiaire en Conseil</td>
+                <td>Hybride</td>
+                <td>8–12 Semaines</td>
+                <td><a href="https://www2.deloitte.com/global/en/pages/careers/topics/students.html" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Spotify</td>
+                <td>Stagiaire en Conception de Produit</td>
+                <td>À distance</td>
+                <td>3 Mois</td>
+                <td><a href="https://www.lifeatspotify.com/student" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Airbnb</td>
+                <td>Stagiaire en Marketing</td>
+                <td>À distance</td>
+                <td>10 Semaines</td>
+                <td><a href="https://careers.airbnb.com/university/" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Intel</td>
+                <td>Stagiaire en Ingénierie Matérielle</td>
+                <td>Hybride</td>
+                <td>3–6 Mois</td>
+                <td><a href="https://www.intel.com/content/www/us/en/jobs/student-center/internships.html" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+            <tr>
+                <td>Adobe</td>
+                <td>Stagiaire en Design UX/UI</td>
+                <td>À distance</td>
+                <td>12 Semaines</td>
+                <td><a href="https://www.adobe.com/careers/university.html" target="_blank" class="apply-btn">Postuler</a></td>
+            </tr>
+        </table>
+        <div class="internship-footer">
+            Tableau des stages mis à jour • 2026
+        </div>
+    </div>
+</main>
+
+<!-- Footer from template -->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Articles Populaires</h3>
+          <div class="post-item">
+            <img src="../images/Bourse-de-la-banque-islamique-de-developpement.png" alt="">
+            <div>
+              <p><strong>Bourse de la Banque Islamique de Développement (IsDB) 2026</strong></p>
+              <small>1 janvier 2026</small>
+            </div>
+          </div>
+          <div class="post-item">
+            <img src="../images/Jack-Kent-Cooke-scholarship.png" alt="">
+            <div>
+              <p><strong>Jack Kent Cooke Scholarship 2027</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+          <div class="post-item">
+            <img src="../images/jadin.jpeg" alt="">
+            <div>
+              <p><strong>Jardine Scholarship 2026–27 | Fully Funded</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>À propos de nous</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">À propos de l'organisation</a></li>
+            <li><a href="#">Nos étudiants</a></li>
+            <li><a href="#">Nos partenaires</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Informations Utiles</h3>
+          <p class="contact-intro">
+            <strong>boursesdetudes235.app</strong> est votre plateforme de confiance pour découvrir des bourses d'études entièrement financées,
+            des programmes de recherche, des stages et des opportunités d'études à l'étranger dans le monde entier.
+          </p>
+          <h3>Coordonnées</h3>
+          <div class="contact-row">
+            <div class="contact-text">
+              <strong>Email:</strong>
+              <span>boursesdetudes235@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Droits d'auteur © 2026 - boursesdetudes235.github.io</p>
+        <div class="footer-links">
+          <a href="#">Conditions d'utilisation</a> | <a href="#">Confidentialité</a> | <a href="#">Avertissement</a> | <a href="#">Droits d'auteur</a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
