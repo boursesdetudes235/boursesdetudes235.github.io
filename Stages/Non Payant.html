@@ -1,5 +1,267 @@
- <!-- main CSS file -->
-    <link rel="stylesheet" href="styles.css" />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stages Non Payants - Bourses des Études 235</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+    .stage-container {
+        background: white;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-family: 'Inter', sans-serif;
+    }
+    .stage-container h1, .stage-container h2 {
+        text-align: center;
+        color: #2c3e50;
+    }
+    .stage-container h2 {
+        margin-top: 40px;
+    }
+    .stage-container p {
+        line-height: 1.7;
+        color: #333;
+        text-align: justify;
+    }
+    .stage-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .stage-table th {
+        background: var(--violet);
+        color: white;
+        padding: 12px;
+        text-align: left;
+    }
+    .stage-table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+    .stage-table tr:hover {
+        background: #f8f9fa;
+    }
+    .stage-table a {
+        color: var(--violet);
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .tip {
+        margin-top: 35px;
+        background: #f0e6f6;
+        padding: 20px;
+        border-left: 5px solid var(--violet);
+        border-radius: 0 8px 8px 0;
+    }
+     .tip ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .tip li {
+        margin-bottom: 8px;
+    }
+</style>
+<script src="../script.js" defer></script>
+</head>
+<body>
 
-    <!-- Your JavaScript file -->
-    <script src="script.js"></script>
+<!-- Header from template -->
+<div class="site-header">
+    <div class="top-bar">
+        <div class="right">
+            <a href="#">Contactez-nous</a>
+            <a href="#">À propos</a>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="logo"><img src="../images/head-image.png" alt="Header Image" class="header-image"></div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="">Bourses ▾</a>
+                <div class="dropdown">
+                    <a href="../Bourses/Licence.html">Bourses Licence</a>
+                    <a href="../Bourses/Master.html">Bourses Master</a>
+                    <a href="../Bourses/Doctorat.html">Bourses Doctorat</a>
+                    <a href="../Bourses/Entièrement Financé.html">Bourses Entièrement Financé</a>
+                    <a href="../Bourses/Bourses Sans IELTS.html">Bourses Sans IELTS</a>
+                    <a href="../Bourses/Bourses Avec IELTS.html">Bourses Avec IELTS</a>
+                </div>
+            </li>
+            <li><a href="">Programmes & Prix ▾</a>
+                <div class="dropdown">
+                    <a href="../Programmes & Prix/Programmes d'Échange.html">Programmes d'Échange</a>
+                    <a href="../Programmes & Prix/Programmes d'Été.html">Programmes d'Été</a>
+                    <a href="../Programmes & Prix/Prix & Compétitions.html">Prix & Compétitions</a>
+                    <a href="../Programmes & Prix/Programmes de Recherche.html">Programmes de Recherche</a>
+                </div>
+            </li>
+            <li><a href="">Guides ▾</a>
+                <div class="dropdown">
+                    <a href="../Guides/Comment Postuler.html">Comment Postuler ?</a>
+                    <a href="../Guides/Lettre de Motivation.html">Lettre de Motivation</a>
+                    <a href="../Guides/CV Académique.html">CV Académique</a>
+                    <a href="../Guides/Guide CSC & CSCA.html">Guide CSC & CSCA</a>
+                    <a href="../Guides/Étudier en Chine.html">Étudier en Chine</a>
+                    <a href="../Guides/Étudier en Europe.html">Étudier en Europe</a>
+                </div>
+            </li>
+            <li><a href="">Stages ▾</a>
+                <div class="dropdown">
+                    <a href="Internationaux.html">Stages Internationaux</a>
+                    <a href="Non Payant.html">Stages Non Payant</a>
+                    <a href="Payant.html">Stages Payant</a>
+                </div>
+            </li>
+            <li><a href="">Infos Pays ▾</a>
+                <div class="dropdown">
+                    <a href="../Infos Pays/Chine.html">Chine</a>
+                    <a href="../Infos Pays/Brunei.html">Brunei</a>
+                    <a href="../Infos Pays/Russie.html">Russie</a>
+                    <a href="../Infos Pays/Corée du Sud.html">Corée du Sud</a>
+                    <a href="../Infos Pays/Turquie.html">Turquie</a>
+                    <a href="../Infos Pays/Canada.html">Canada</a>
+                    <a href="../Infos Pays/Thaïlande.html">Thaïlande</a>
+                    <a href="../Infos Pays/États-Unis.html">États-Unis</a>
+                    <a href="../Infos Pays/France.html">France</a>
+                    <a href="../Infos Pays/Allemagne.html">Allemagne</a>
+                    <a href="../Infos Pays/Italie.html">Italie</a>
+                    <a href="../Infos Pays/Malaisie.html">Malaisie</a>
+                    <a href="../Infos Pays/Indonésie.html">Indonésie</a>
+                    <a href="../Infos Pays/Japon.html">Japon</a>
+                    <a href="../Infos Pays/Arabie Saoudite.html">Arabie Saoudite</a>
+                    <a href="../Infos Pays/Émirats Arabes Unis.html">Émirats Arabes Unis</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <div class="search-wrapper">
+            <input type="text" id="searchBox" placeholder="Rechercher une bourse..." autocomplete="off">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        <span class="icon" id="searchIcon">🔍</span>
+        <span class="icon">📘</span>
+        <span class="icon">🎓</span>
+        <div class="menu-toggle" id="mobile-menu-toggle">☰</div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <div class="stage-container">
+        <h1>Stages Non Payants</h1>
+        <p>Les stages non rémunérés, souvent appelés stages bénévoles, sont une voie précieuse pour acquérir une expérience pratique, en particulier dans des secteurs comme les organisations non gouvernementales (ONG), les institutions culturelles, ou la recherche académique. Bien qu'ils n'offrent pas de salaire, la valeur qu'ils apportent en termes de compétences, de réseau et d'épanouissement personnel est inestimable.</p>
+        <p>Ces opportunités permettent de s'immerger dans un domaine passionnant, de contribuer à une cause qui vous tient à cœur et de développer des compétences transférables qui enrichiront votre CV.</p>
+        <h2>Organisations proposant des stages non rémunérés</h2>
+        <table class="stage-table">
+            <tr>
+                <th>Organisation</th>
+                <th>Domaine</th>
+                <th>Lien</th>
+            </tr>
+            <tr>
+                <td>Nations Unies (UN)</td>
+                <td>Relations internationales, Développement, Droits de l'homme</td>
+                <td><a href="https://careers.un.org/lbw/home.aspx?viewtype=IP" target="_blank">Voir les offres</a></td>
+            </tr>
+            <tr>
+                <td>Amnesty International</td>
+                <td>Droits de l'homme, Recherche, Plaidoyer</td>
+                <td><a href="https://careers.amnesty.org/vacancies/section/volunteering-internships/" target="_blank">Explorer</a></td>
+            </tr>
+            <tr>
+                <td>Médecins Sans Frontières (MSF)</td>
+                <td>Humanitaire, Santé, Logistique</td>
+                <td><a href="https://www.msf.org/work-us" target="_blank">S'engager</a></td>
+            </tr>
+            <tr>
+                <td>Croix-Rouge</td>
+                <td>Aide humanitaire, Santé communautaire</td>
+                <td><a href="https://www.ifrc.org/jobs" target="_blank">Opportunités</a></td>
+            </tr>
+            <tr>
+                <td>Idealist</td>
+                <td>Portail pour les organisations à but non lucratif</td>
+                <td><a href="https://www.idealist.org/fr/" target="_blank">Rechercher</a></td>
+            </tr>
+        </table>
+        <div class="tip">
+            <strong>Comment valoriser un stage non payant :</strong>
+            <ul>
+                <li>Concentrez-vous sur les compétences acquises et les projets réalisés.</li>
+                <li>Demandez une lettre de recommandation à la fin de votre stage.</li>
+                <li>Mettez en avant l'impact de votre contribution sur votre CV.</li>
+                <li>Développez activement votre réseau professionnel pendant le stage.</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<!-- Footer from template -->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Articles Populaires</h3>
+          <div class="post-item">
+            <img src="../images/Bourse-de-la-banque-islamique-de-developpement.png" alt="">
+            <div>
+              <p><strong>Bourse de la Banque Islamique de Développement (IsDB) 2026</strong></p>
+              <small>1 janvier 2026</small>
+            </div>
+          </div>
+          <div class="post-item">
+            <img src="../images/Jack-Kent-Cooke-scholarship.png" alt="">
+            <div>
+              <p><strong>Jack Kent Cooke Scholarship 2027</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+          <div class="post-item">
+            <img src="../images/jadin.jpeg" alt="">
+            <div>
+              <p><strong>Jardine Scholarship 2026–27 | Fully Funded</strong></p>
+              <small>29 novembre 2025</small>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>À propos de nous</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">À propos de l'organisation</a></li>
+            <li><a href="#">Nos étudiants</a></li>
+            <li><a href="#">Nos partenaires</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Informations Utiles</h3>
+          <p class="contact-intro">
+            <strong>boursesdetudes235.app</strong> est votre plateforme de confiance pour découvrir des bourses d'études entièrement financées,
+            des programmes de recherche, des stages et des opportunités d'études à l'étranger dans le monde entier.
+          </p>
+          <h3>Coordonnées</h3>
+          <div class="contact-row">
+            <div class="contact-text">
+              <strong>Email:</strong>
+              <span>boursesdetudes235@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Droits d'auteur © 2026 - boursesdetudes235.github.io</p>
+        <div class="footer-links">
+          <a href="#">Conditions d'utilisation</a> | <a href="#">Confidentialité</a> | <a href="#">Avertissement</a> | <a href="#">Droits d'auteur</a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
